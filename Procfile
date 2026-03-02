@@ -1,1 +1,1 @@
-web: python3 webhook_server_production.py
+web: python3 landing_page.py
