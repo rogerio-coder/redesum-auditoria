@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.env
+.DS_Store
+*.log
+*.pdf
+/analise_fatura_*.pdf
+.git/
+.venv/
+venv/
+memory/
+MEMORY.md
+SOUL.md
+USER.md
+IDENTITY.md
+HEARTBEAT.md
