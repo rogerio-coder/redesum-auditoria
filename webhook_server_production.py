@@ -20,8 +20,8 @@ sys.path.insert(0, '/data/.openclaw/workspace')
 MERCADOPAGO_TOKEN = os.getenv('MERCADOPAGO_TOKEN')
 TWILIO_ACCOUNT_SID = os.getenv('TWILIO_ACCOUNT_SID')
 TWILIO_AUTH_TOKEN = os.getenv('TWILIO_AUTH_TOKEN')
-TWILIO_WHATSAPP_FROM = os.getenv('TWILIO_WHATSAPP_FROM')
-TWILIO_WHATSAPP_TO = os.getenv('TWILIO_WHATSAPP_TO')
+TWILIO_WHATSAPP_FROM = os.getenv('TWILIO_WHATSAPP_FROM', 'whatsapp:+14155238886')
+TWILIO_WHATSAPP_TO = os.getenv('TWILIO_WHATSAPP_TO', 'whatsapp:+5562993156662')
 
 def send_twilio_whatsapp(message):
     """Envia mensagem WhatsApp via Twilio"""
