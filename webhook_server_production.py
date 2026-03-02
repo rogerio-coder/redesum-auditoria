@@ -175,14 +175,16 @@ class WebhookHandler(BaseHTTPRequestHandler):
             self.end_headers()
 
 def main():
+    port = int(os.getenv('PORT', 5000))
+    
     print("\n" + "="*60)
     print("🚀 WEBHOOK PRODUCTION - REDESUM")
     print("="*60)
-    print("📍 URL: http://0.0.0.0:3001/api/webhook")
-    print("✅ Pipeline: Pagamento → Análise PDF → Email")
+    print(f"📍 URL: http://0.0.0.0:{port}/api/webhook")
+    print("✅ Pipeline: Pagamento → Análise PDF → Email + WhatsApp")
     print("="*60 + "\n")
     
-    server = HTTPServer(('0.0.0.0', 3001), WebhookHandler)
+    server = HTTPServer(('0.0.0.0', port), WebhookHandler)
     try:
         server.serve_forever()
     except KeyboardInterrupt:
