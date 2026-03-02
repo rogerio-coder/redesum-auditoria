@@ -16,15 +16,12 @@ import glob
 
 sys.path.insert(0, '/data/.openclaw/workspace')
 
-import os
-
-MERCADOPAGO_TOKEN = os.getenv('MERCADOPAGO_TOKEN', 'APP_USR-462417171268457-022808-e6898e6987c65a65d9b5aa3be09f12eb-3232594663')
-
-# TWILIO WHATSAPP
-TWILIO_ACCOUNT_SID = os.getenv('TWILIO_ACCOUNT_SID', 'AC45d413f00859d7b3ac76615d0593920f')
-TWILIO_AUTH_TOKEN = os.getenv('TWILIO_AUTH_TOKEN', 'b9d224495927d1277ab98559e6f99464')
-TWILIO_WHATSAPP_FROM = os.getenv('TWILIO_WHATSAPP_FROM', 'whatsapp:+14155238886')
-TWILIO_WHATSAPP_TO = os.getenv('TWILIO_WHATSAPP_TO', 'whatsapp:+5562931960861')
+# Carrega variáveis de ambiente (Railway configura essas)
+MERCADOPAGO_TOKEN = os.getenv('MERCADOPAGO_TOKEN')
+TWILIO_ACCOUNT_SID = os.getenv('TWILIO_ACCOUNT_SID')
+TWILIO_AUTH_TOKEN = os.getenv('TWILIO_AUTH_TOKEN')
+TWILIO_WHATSAPP_FROM = os.getenv('TWILIO_WHATSAPP_FROM')
+TWILIO_WHATSAPP_TO = os.getenv('TWILIO_WHATSAPP_TO')
 
 def send_twilio_whatsapp(message):
     """Envia mensagem WhatsApp via Twilio"""
