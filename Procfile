@@ -1,1 +1,1 @@
-web: python3 landing_page.py
+web: python3 app.py
